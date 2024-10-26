@@ -1,0 +1,54 @@
+Step 0: Log In
+Access the Azure Portal and log in.
+
+Task 1: Create a Virtual Network (VNet)
+1.Navigate to Virtual Network
+->Click Virtual Networks or search for it.
+
+2.Create VNet
+->Click CREATE.
+
+3.Fill Details
+->Resource Group: Select or create.
+->VNet Name: Enter a name.
+->Region: Choose your region.
+
+4.Configure IP Addresses
+->Add a new address range.
+
+5.Add Subnet
+->Click Add subnet, enter details, then click CREATE.
+
+6.Review & Create
+->Click REVIEW + CREATE, then CREATE.
+
+
+Task 2: Create a Virtual Machine (VM)
+1.Navigate to Virtual Machines
+->Click Virtual Machines or search for it.
+
+2.Create VM
+->Click Azure Virtual Machine.
+
+3.Configure VM
+->Resource Group: Select or create.
+->VM Name: Enter a name.
+->Region: Same as VNet.
+->Image: Select OS.
+->Size: Choose size.
+->Admin Account: Enter username and password.
+
+4.Select Disk Type
+->Choose Standard SSD.
+
+5.Create VM
+->Click REVIEW + CREATE, then CREATE.
+
+
+
+Access the VM
+1.Get Public IP
+->Copy the Public IP from VM properties.
+2.Remote Desktop Connection
+->Open Remote Desktop Connection.
+->Paste the IP, enter credentials, and click Connect.
