@@ -1,0 +1,26 @@
+
+Objective: Create multiple Virtual Machines (VM1 and VM2) in two different Virtual Networks
+Steps to Create a Virtual Machine (VM)
+STEP 1:Navigate to Virtual Machines
+
+STEP 2:Go to the menu bar at the top left of the Azure home screen and select Virtual Machines, or simply search Virtual Machines in the search bar.
+Start Creating a New Virtual Machine
+
+STEP 3:Select Azure Virtual Machine.
+Fill in Virtual Machine Details
+
+->Resource Group: Choose an existing one or create a new resource group as per your preference.
+->Virtual Machine Name: Enter a unique name for each VM.
+->Region: Choose the desired Azure region.
+->Image: Select the OS image you want to use.
+->Size: Choose the VM size based on your requirements.
+->Administrator Account: Enter the username and password, and confirm the password.
+
+STEP 4:Click REVIEW + CREATE to review your configurations.
+Once reviewed, click CREATE to deploy the Virtual Machine.
+Access the Deployed VM
+
+STEP 5:After deployment, click Go to Resource to view your Virtual Machine.
+Create the Second Virtual Machine (VM2)
+
+Repeat steps 1-5 but select a different Virtual Network than the one used for VM1 to ensure they are in separate networks.
