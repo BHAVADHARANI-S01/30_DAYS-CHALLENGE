@@ -1,1 +1,113 @@
-smaple text 
+TASK 1:
+       To Create a 4vnet
+       ----------------- 
+       Step 1 : Sign in to the azure portal
+       step 2 : Select Resource (Create resource)
+       step 3 : Search for "Virtual network" (Create VNet)
+       step 4 : Fill in the required fields such as the name, address space and subscription.
+       step 5 : Select the "CREATE" button to create the VNet.
+Repeat the above steps for the rest of the VNets you Want to create.
+___________________________________________________________________________________________________________________________________________________________
+TASK 2:
+    Management VNet (HUB):
+    A management VNet, also known as hub VNet, the hub VNet acts as a central point of connectivity for the spoke VNets allowing resource in the spoke
+    VNets,to communicate with each other and with resources in one or more connected VNets, also Known as spoke VNets
+    step 1: Sign in to the azure portal
+    step 2: select resource (create resource)
+    step 3: search for "virtualNetwork" and select it from the results.
+    step 4: Fill in the required fields, such as the name,address space and subscription.
+    step 5: In the "Advanced" section,select "Add a virtualNetwork" to create a hub-spoke topology.
+    step 6: select the "create" button to create the VNet.
+___________________________________________________________________________________________________________________________________________________________
+TASK 3:
+Create the Production VNet
+
+Sign in to Azure, go to "Virtual Networks," and click "Create."
+Enter details like the VNet's name, region, and address range.
+Add Subnets for Different Resources
+
+Inside the production VNet, create separate subnets for resources like web servers, databases, and load balancers.
+Assign each subnet its own IP range to keep resources organized and scalable.
+Set Up Security Protections
+
+Attach Network Security Groups (NSGs) to each subnet to manage which traffic can enter or leave.
+Add firewall rules within NSGs to allow or block specific traffic.
+You might also add an Azure Firewall to protect the entire network.
+Enable Secure Connections
+
+If needed, set up a VPN gateway for secure access to on-premises networks.
+For faster, private connections, consider using Azure ExpressRoute.
+Keep Production Separate from Other Networks
+
+Make sure the production VNet is isolated from development and test networks.
+Use VNet peering carefully if you need to connect to other VNets, and add security rules to limit access.
+Review and Test Settings
+
+Double-check all configurations to ensure they follow security guidelines.
+Test connectivity and security to make sure production resources are secure.
+___________________________________________________________________________________________________________________________________________________________
+TASK 4:
+4. Testing Vnet:
+----------------
+A Testing VNet in Azure is a virtual network that is used for testing and development purposes.
+
+It is a separate network environment that is isolated from the production network and allows for testing of new configurations, updates, and deployments 
+without affecting the production environment.
+The Testing VNet can be used to test new software, applications, and updates before they are deployed to the production network.
+This helps ensure that any issues or bugs are identified and resolved before they can cause problems in the production environment.
+Additionally, the Testing VNet can be used to test disaster recovery plans and network configurations, ensuring that they are effective and 
+reliable before they are implemented in the production network.
+___________________________________________________________________________________________________________________________________________________________
+TASK 5:
+step 1:Log in to the Azure portal (https://portal.azure.com/)
+
+step 2:Click on the "Create a resource" button in the top left corner of the portal
+
+step 3:In the search bar, type "Virtual Network" and select the "Virtual Network" option from the list
+
+step 4:Click the "Create" button
+
+step 5:In the "Basics" tab, enter a name for the virtual network, select the subscription and resource group you want to use. Make sure you name it developing Vnet for easy identification.
+
+step 6:In the "Address space" tab, enter the IP address range for the virtual network. This is the range of IP addresses that will be available for use within the virtual network.
+
+step 7:In the "Subnets" tab, create a new subnet for the developing VNet. This subnet will be used for all developing resources, such as virtual machines, load balancers, and network interfaces.
+
+step 8:In the "Security" tab, you can configure the security settings for the virtual network. This includes firewall rules, network security groups, and VPN connections.
+
+step 9:In the "Tags" tab, you can add any tags that you want to use to organize your virtual network.
+
+step 10:Click the "Review + Create" button to review the configuration, and then click "Create" to create the virtual network.
+
+step 11:"Wait for the virtual network to be created. This process may take a few minutes.
+
+step 12:Once the virtual network is created, you can navigate to the virtual network in the Azure portal to view and manage it.
+
+step 13:Now you have to create Hub and spoke architecture. To do that, you need to create Hub VNet and then connect it to multiple spoke VNets.
+
+step 14:To create a Hub VNet, go to the Azure portal, and click on the "Create a resource" button. Select "Virtual Network" and click "Create".
+
+step 15:In the "Basics" tab, enter a name for the hub VNet, select the subscription and resource group.
+
+step 16:In the "Address space" tab, enter the IP address range for the hub VNet.
+
+step 17:In the "Subnets" tab, create a new subnet for the hub VNet. This subnet will be used for all hub resources, such as virtual machines, load balancers, and network interfaces.
+
+step 18:In the "Security" tab, you can configure the security settings for the hub VNet. This includes firewall rules, network security groups, and VPN connections.
+
+step 19:In the "Tags" tab, you can add any tags that you want to use to organize your hub VNet.
+
+step 20:Click the "Review + Create" button to review the configuration, and then click "Create" to create the hub VNet.
+
+step 21:Now you have to connect the spoke VNets to the hub VNet. Go to the Azure portal and select the spoke VNet that you want to connect.
+
+step 22:In the spoke VNet, go to the "Connectivity" tab, and click on the "Add" button to add a new connection.
+
+step 23:Select "Virtual Network" as the connection type and enter the details of the hub VNet.
+
+step 24:Click "Save" to create the connection.
+
+step 25:Repeat steps 21-24 for all spoke VNets that you want to connect to the hub VNet.
+
+step 26:Once you have created the hub and spoke architecture, you can now launch virtual machines in each VNet
+___________________________________________________________________________________________________________________________________________________________
