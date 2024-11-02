@@ -43,7 +43,7 @@ step 6:Click Review + Create and then CREATE to start deployment.
 Once deployment is complete, go to the resource to view and manage your Internal Load Balancer.
 These simplified steps cover the essentials for setting up an internal load balancer.
 __________________________________________________________________________________________________________________________________________________________________________________________
-Steps to Create an External Load Balance
+Steps to Create an External Load Balancer
 -----------------------------------------
 step 1:Search and Start Setup Type "Load Balancer" in the search bar and click to create a new load balancer.
 ->Enter the necessary details:
