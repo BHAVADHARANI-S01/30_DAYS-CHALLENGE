@@ -1,0 +1,88 @@
+Steps to Create an Internal Load Balancer :
+---------------------------------------------
+
+step 1:Search for "Load Balancer" in the search bar.
+step 2:Click to start creating a new load balancer and select:
+->Resource Group
+->Load Balancer Name
+->Region
+->Type: Internal
+->Tier and SKU (based on your needs).
+->Configure Frontend IP:
+
+step 3:Go to Frontend IP Configuration and click "+ADD".
+->Enter the details:
+->Frontend Name
+->Choose IPv4 or IPv6
+->IP Address: Create a new one and name it.
+->Select VNet and Subnet.
+->Choose Zone-Redundant if required.
+->Click ADD to save.
+->Set Up Backend Pool:
+
+step 4:Go to Backend Pools and click "+ADD".
+->Enter the details:
+->Backend Pool Name
+->Virtual Network: Select the VNet within the Resource Group.
+->Backend Configuration: Choose IP Address.
+->IP Address: Create a new one and name it.
+->Select IP Addresses for backend resources.
+->Add Load Balancing Rules:
+
+step 5:Go to Inbound Rules and click on Load Balancing Rule > "+ADD".
+->Enter rule details:
+->Rule Name
+->Choose IPv4 or IPv6
+->Select Frontend IP and Backend Pool
+->Health Probe: Create a new probe with name and protocol.
+->Set Session Persistence, Idle Timeout to 15 minutes, enable TCP Reset, and disable Floating IP.
+->Click ADD to save the rule.
+->Review and Create:
+
+step 6:Click Review + Create and then CREATE to start deployment.
+Once deployment is complete, go to the resource to view and manage your Internal Load Balancer.
+These simplified steps cover the essentials for setting up an internal load balancer.
+__________________________________________________________________________________________________________________________________________________________________________________________
+Steps to Create an External Load Balance
+-----------------------------------------
+step 1:Search and Start Setup Type "Load Balancer" in the search bar and click to create a new load balancer.
+->Enter the necessary details:
+->Resource Group
+->Load Balancer Name
+->Region
+->Type: External
+->Tier and SKU (as needed).
+->Configure Frontend IP:
+
+step 2:Go to Frontend IP Configuration and click "+ADD".
+->Enter the details:
+->Frontend Name
+->Choose IPv4 or IPv6
+->IP Address: Create a new public IP address and name it.
+->Select VNet and Subnet if necessary.
+->Choose Zone-Redundant if needed.
+->Click ADD to save.
+->Set Up Backend Pool:
+
+step 3:Go to Backend Pools and click "+ADD".
+->Enter the details:
+->Backend Pool Name
+->Virtual Network: Select the appropriate VNet in the Resource Group.
+->Backend Configuration: Choose IP Address.
+->IP Address: Create a new public IP address and name it.
+->Select IP addresses for the backend resources.
+->Add Load Balancing Rules:
+
+step 4:Navigate to Inbound Rules and click on Load Balancing Rule > "+ADD".
+->Enter the rule details:
+->Enter rule details:
+->Rule Name
+->Choose IPv4 or IPv6
+->Select the Frontend IP Address and Backend Pool
+->Health Probe: Create a new probe with a name and protocol.
+->Set Session Persistence, Idle Timeout to 15 minutes, enable TCP Reset, and disable Floating IP.
+->Click ADD to save the rule.
+->Review and Create:
+
+step 5:Click Review + Create and then CREATE to begin deployment.
+Once deployment is complete, go to the resource to view and manage your External Load Balancer.
