@@ -1,0 +1,33 @@
+Step 1: Create a Virtual Network (VNet)
+Step 2: Add a Gateway Subnet
+->Inside your new VNet, go to Subnets.
+->Click + Gateway subnet.
+->Keep the default name (GatewaySubnet) and click Save.
+Step 3: Create a Virtual Network Gateway
+->Search for Virtual Network Gateways in the Azure portal and click + Add.
+->Name your gateway, set Gateway type to VPN, and VPN type to Route-based.
+->Choose a SKU (Basic, VpnGw1, etc.), and link it to your VNet.
+->Click Review + create and then Create.
+Step 4: Generate a Root Certificate
+->On your computer, generate a root certificate:
+->For Windows, use PowerShell.
+->For Mac/Linux, use OpenSSL.
+->Upload the root certificate’s public key in the Point-to-Site Configuration section of your Virtual Network Gateway.
+Step 5: Configure Point-to-Site VPN Settings
+->In Point-to-Site Configuration, add:
+->Address pool (IP range for VPN clients, e.g., 172.16.0.0/24).
+->Authentication type (usually Certificate or Azure AD).
+->Click Save.
+Step 6: Download the VPN Client
+->In Point-to-Site Configuration, click Download VPN client.
+->Save this file on the client device.
+Step 7: Install the VPN Client
+->Run the downloaded VPN client installer on the device you want to connect.
+->Follow the setup instructions.
+Step 8: Connect to the Virtual Network
+->Open the VPN client on your device.
+->Choose your VPN profile and click Connect.
+->Enter any required credentials.
+Step 9: Verify the Connection
+->Check if the VPN client shows a Connected status.
+->Test by accessing resources in your Azure VNet.
