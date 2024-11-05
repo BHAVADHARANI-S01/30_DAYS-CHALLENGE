@@ -1,0 +1,33 @@
+Step 1:Log in to Azure Portal:
+ • Go to https://portal.azure.com/.
+
+Step 2:Create a Storage Account:
+ • Search for Storage Accounts in the search bar.
+ • Click Create and enter the following details:
+  a. Storage Account Name
+  b. Performance: Standard
+  c. Region: Choose your preferred region
+  d. Access Tier: Hot
+ • Click Review + Create, then Create.
+
+Step 3:Set up a Container:
+ • After deployment, go to your Storage Account.
+ • In the left menu, select Containers and add a container (e.g., "input").
+ • Upload a file to the container to test the setup.
+
+Step 4:Enable Static Website Hosting:
+ • In your Storage Account menu, select Static Website.
+ • Click Enable and enter:
+  a. Index document name (e.g., index.html)
+  b. Error document name (e.g., error.html)
+ • Click Save.
+Step 5:Upload Website Files:
+ • Open Visual Studio Code (VSC) and install the Azure Storage extension.
+ • Create a folder for your website files and add:
+  a. index.html for main content
+  b. error.html for error handling
+ • Right-click the folder and choose Deploy to Static Website.
+ • Select the appropriate subscription and storage account.
+
+Step 6:Access Your Website:
+ • Copy the Primary Endpoint URL from the Static Website page in Azure to view your hosted website.
