@@ -1,0 +1,14 @@
+Once the snapshot is created, you can use it to create a new VM. Here are the steps:
+
+->Go to the Azure portal, select "Create a resource"
+->Select "Windows Server" or "Linux" depending on the OS of the original VM
+->Select "From image" in the "Basics" tab
+->Select the snapshot that you created earlier and continue with the VM creation process
+->Provide a name and size for the new VM
+->Select the options like vnet,subnet,availability set etc.
+->Finally click on create to launch the new VM. Alternatively, You can also create a new VM from the snapshot by creating a VHD from the snapshot and then create a new VM from the VHD.
+->Go to the Azure portal, select the storage account where the snapshot is stored
+->Select "Containers" and then select the container where the snapshot is stored
+->Select the snapshot and then click on "Create" button
+->Select "VHD" and provide a name for the VHD
+->Once the VHD is created, you can then use it to create a new VM by following the steps above.
