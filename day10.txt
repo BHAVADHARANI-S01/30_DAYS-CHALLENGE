@@ -1,0 +1,21 @@
+ Create an Alert rule for VM CPU percentage.
+Using Azure Portal:
+step 1:Go to the Azure portal (https://portal.azure.com/)
+
+step 2:Click on "Monitor" from the left navigation menu
+
+step 3:Click on "Alerts"
+
+step 4:Click on "+ New alert rule"
+
+step 5:Select the subscription, resource group, and virtual machine that you want to create an alert for.
+
+step 6:Select the "Metric" condition type, and then select "Percentage CPU" as the metric
+
+step 7:Select "Greater than or equal to" as the condition and enter the threshold value for the CPU percentage
+
+step 8:Select the "Frequency" and "Period" for how often the rule should check the condition.
+
+step 9:Select the "Action Group" or create a new one
+
+step 10:Fill out the details for the alert rule, including the name and description, and click on "Create"
