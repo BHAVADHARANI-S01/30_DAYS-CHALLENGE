@@ -1,0 +1,31 @@
+Step 1: Understand the Availability Set Concept
+->Fault Domains (FDs): Protect VMs from hardware failures.
+->Update Domains (UDs): Protect VMs from simultaneous updates or maintenance.
+->Specify the number of FDs and UDs during Availability Set creation.
+Step 2: Create an Availability Set
+->Navigate to the Azure Portal.
+->Search for Availability Set in the search bar and click on it.
+->Click Create to start the creation process.
+->Fill in the required details:
+->Resource Group Name: Select or create a new one.
+->Availability Set Name: Enter a unique name.
+->Region: Select the Azure region.
+->Fault Domains: Choose the number of FDs (2 or 3).
+->Update Domains: Choose the number of UDs (e.g., 5).
+->Click Review + Create and then Create to deploy the Availability Set.
+Step 3: Launch a Virtual Machine into the Availability Set
+->Go to Virtual Machines in the Azure Portal.
+->Click Create to start creating a new VM.
+->Under the Basics tab, enter:
+->Resource Group Name: Use the same as the Availability Set.
+->VM Name, Region, and Size.
+->In the Availability Options field, select Availability Set.
+->From the dropdown, choose the Availability Set you created in Step 2.
+Step 4: Configure the Virtual Machine
+->Configure Disks, Networking, and Management based on your requirements.
+->Click Review + Create, then Create to launch the VM.
+Step 5: Add Additional VMs to the Availability Set
+->Repeat Step 3 and Step 4 for any additional VMs to be part of the same Availability Set.
+Step 6: Verify the Availability Set Setup
+->Navigate to the Availability Set resource in the Azure Portal.
+->Check the Distribution of VMs across Fault Domains and Update Domains.
