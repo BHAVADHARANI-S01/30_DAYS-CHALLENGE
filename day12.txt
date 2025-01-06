@@ -1,0 +1,18 @@
+Step 1: Log in to Azure Portal
+->Go to Azure Portal and sign in.
+
+Step 2: Create a Docker Container
+->Search for "Container Instances" and click Create.
+->Fill in these details:
+->Image name: httpd:latest (for Apache) or nginx:latest (for Nginx).
+->Ports: Open port 80.
+->Click Review + Create, then Create.
+
+Step 3: Access Your Web Server
+->Go to the container’s Overview page after it’s running.
+->Copy the IP address and paste it into your browser.
+->Optional: Customize the Server
+->Connect to the container:
+--->docker exec -it <container-name>
+--->For Apache, run:
+--->apt-get update && apt-get install apache2
