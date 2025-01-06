@@ -1,0 +1,18 @@
+Step 1: Log in to Azure Portal
+•Go to Azure Portal and sign in.
+
+Step 2: Create the First Container
+•Search for "Container Instances" and click Create.
+->Fill in these details:
+•Name: Give a name for the container.
+•Image: Enter the Docker image name (e.g., nginx:latest or httpd:latest).
+•Ports: Open port 80.
+•Click Review + Create, then Create.
+
+Step 3: Create the Second Container
+•Repeat Step 2 to create the second container with a different name or image.
+•Use the same steps to configure the image and ports.
+
+Step 4: Access the Containers
+•Go to the Overview page of each container.
+•Copy their IP addresses and test them in your browser.
