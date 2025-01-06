@@ -1,0 +1,64 @@
+Step 1: Navigate to the Azure Portal
+->Open your browser and go to Azure Portal.
+->Sign in to your Azure account.
+
+Step 2: Create an Application Gateway
+->In the Azure portal, click on "Create a resource" in the left-hand menu.
+->Search for "Application Gateway" in the search bar and select it.
+->Click on the "Create" button.
+
+Step 3: Configure the Basics
+->Subscription: Select your Azure subscription.
+->Resource Group: Select an existing resource group or create a new one.
+->Region: Choose the Azure region where you want to deploy the gateway.
+->Name: Provide a name for your application gateway.
+->Tier: Choose the desired SKU and size (e.g., Standard_v2, WAF_v2). The size depends on your workload.
+->Click Next to proceed.
+
+Step 4: Set Up Frontend IP
+->Under Frontend IP configuration, choose Public.
+->Assign a new public IP address by selecting Add new and providing a name for the public IP.
+->Click Next: Backend pool to proceed.
+
+Step 5: Configure the Backend Pool
+->Under Backend pools, click Add a backend pool.
+->Provide a name for the backend pool (e.g., "AppServicePool").
+->Under Add backend targets, select App Services.
+->Choose the App Service that you want to connect to the application gateway.
+->Click Add and then Next: Configuration.
+
+Step 6: Set Up Listeners
+->Under Listeners, click Add a listener.
+->Listener name: Provide a name for the listener (e.g., "AppListener").
+->Frontend IP: Select the public IP created in Step 4.
+->Protocol: Choose HTTP or HTTPS depending on your app’s requirements.
+->If using HTTPS, upload an SSL certificate.
+->Port: Enter the port number (default is 80 for HTTP or 443 for HTTPS).
+->Click Add and then Next: Rules.
+
+Step 7: Configure Routing Rules
+->Under Routing rules, click Add a routing rule.
+->Rule name: Provide a name (e.g., "AppRule").
+->Listener: Select the listener created in Step 6.
+->Backend targets: Choose the backend pool created in Step 5.
+->Backend settings: Configure settings like HTTP timeout or create a new one if needed.
+->Click Add and then Next: Tags.
+
+Step 8: Review and Create
+->Optionally, add tags for easier resource management.
+->Click Next: Review + create.
+->Review all the configurations and click Create to deploy the application gateway. The deployment may take several minutes.
+
+Step 9: Retrieve the Application Gateway Public IP or FQDN
+->After deployment, go to the Overview page of the application gateway.
+->Copy the Public IP address or FQDN of the application gateway.
+
+Step 10: Update DNS Settings
+->If you have a custom domain, go to your DNS provider’s management portal.
+->Create a CNAME record pointing your custom domain to the FQDN of the application gateway.
+->Example: www.yourdomain.com -> <app-gateway-fqdn>.
+->Alternatively, you can update the A record with the public IP address of the application gateway.
+
+Step 11: Access Your App Service Through the Gateway
+->Open your browser and enter the public IP address, FQDN, or your custom domain (if DNS is configured).
+->You should now be able to access your Azure App Service through the application gateway.
