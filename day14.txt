@@ -1,0 +1,31 @@
+
+Step 1: Log in to Azure Portal
+•Open Azure Portal in your browser.
+•Sign in with your Azure account.
+
+Step 2: Select Your Virtual Machine
+•In the left menu, click on Virtual Machines.
+•Select the virtual machine where your Docker container is running.
+
+Step 3: Attach a Disk to the VM (Optional)
+•Go to the Disks section of the VM.
+•Click Add Data Disk and attach a new disk.
+•Follow Azure’s prompts to format and mount the disk (if needed).
+
+Step 4: Connect to Your Virtual Machine
+•Use SSH to connect to the VM:
+•ssh <username>@<VM-IP-address>
+•Navigate to the directory you want to mount (e.g., /data).
+Step 5: Run the Docker Command with Volume Mount
+
+•Use the following command to run your Docker container with the volume:
+•docker run -v /host/path:/container/path <image-name>
+•Replace /host/path with the directory on your VM (e.g., /data).
+•Replace /container/path with the directory inside the container (e.g., /app/data).
+•Example:
+•docker run -v /data:/app/data nginx:latest
+
+Step 6: Verify the Volume is Mounted
+•Once the container is running, access it using:
+•docker exec -it <container-name> /bin/bash
+•Navigate to the mounted directory (/app/data in the example) to confirm the files are accessible.
