@@ -1,0 +1,59 @@
+1. Deploy Azure SQL Database
+step 1 : Go to Azure SQL:
+• Navigate to Azure SQL in the menu (or search for "Azure SQL" in the search bar).
+step 2 : Create a Database:
+• Click Create and fill in the following:
+• Resource Group Name
+• Admin Login Name
+• Password
+• Database Name
+• Region
+• Subscription
+• If no server exists, click Create a server and configure it.
+step 3 : Networking:
+• Select Public or Private Endpoints.
+• Configure VNet Rules or Firewall if needed.
+• Choose the Connection Method.
+step 4 : Additional Settings:
+• Set options like:
+• Data Source DB
+• Server Collation
+• Database Collation
+• Timezone.
+step 5 : Deploy the Database:
+• Click Review + Create, then Create.
+• View the Database:
+• Once deployed, click Go to resource to see your Azure SQL Database.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. Verify Azure SQL in SSMS
+step 1 : Open SSMS:
+• Launch Microsoft SQL Server Management Studio.
+step 2 : Connect to the Database:
+• Enter the following details:
+• Server Type: Database Engine
+• Server Name: (Your Azure SQL Server Name)
+• Authentication: SQL Server Authentication
+• Username: (Admin Login)
+• Password: (Admin Password)
+step 3 : Run Test Queries:
+• Use the following queries to verify the database:
+
+//SELECT @@VERSION;
+SELECT * FROM sys.databases;
+SELECT * FROM sys.objects;
+SELECT * FROM sys.dm_os_schedulers;
+SELECT * FROM sys.dm_os_sys_info;
+SELECT * FROM sys.dm_exec_requests;
+SELECT SERVERPROPERTY('EngineEdition');
+SELECT * FROM sys.dm_user_db_resource_governance;
+SELECT * FROM sys.dm_os_job_object;
+Optional: Create a Sample Table:
+Run the following code to create a test table:
+
+CREATE TABLE SampleTable (
+    ID INT PRIMARY KEY,
+    Name NVARCHAR(50)
+);
+INSERT INTO SampleTable (ID, Name) VALUES (1, 'Test Entry');
+SELECT * FROM SampleTable;//
