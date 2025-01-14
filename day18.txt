@@ -1,0 +1,46 @@
+1. Create and Configure User Accounts
+a. Navigate to Microsoft Entra ID
+• Go to Microsoft Entra ID:
+• Click Microsoft Entra ID from the menu (or search for "Microsoft Entra ID" in the search bar).
+• Manage Tenants:
+• In the Overview section, click Manage Tenants to review tenants.
+• Licenses:
+• Return to the Entra ID page and select Licenses if needed.
+b. Create a New User
+• Steps to Create a New User:
+• In the Entra ID menu, click Users > + New User > Create New User.
+• Fill in the details:
+• User Principal Name
+• Display Name
+• Auto-Generate Password (or set one manually).
+• Enable Account
+• Job Title
+• Usage Location
+• Click Create.
+c. Invite an External User
+• Steps to Invite an External User:
+• In the Entra ID menu, click Users > + New User > Invite External User.
+• Fill in the details:
+• Email Address
+• Display Name
+• Message (optional)
+• Description
+• Job Title
+• Usage Location
+• Click Invite.
+______________________________________________________________________________________________________________________________________________________
+2. Create Groups and Add Members
+a. Create a Group
+• Steps to Create a Group:
+• In the Entra ID menu, click Groups > + New Group.
+• Fill in the details:
+• Group Type: Security
+• Group Name
+• Group Description
+• Membership Type: Assigned or Dynamic
+• Click Create.
+b. Add Members to the Group
+• Steps to Add Members:
+•Open the group you created.
+•Click Add Members and search for the user(s) (e.g., the invited guest).
+•Select the user(s) and add them to the group.
