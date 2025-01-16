@@ -1,0 +1,43 @@
+
+Step 1: Log into the Azure Portal
+Go to Azure Portal and sign in with your credentials.
+Step 2: Create a Speech Service
+Search for "Speech" in the search bar and select Speech Services.
+Click + Create to start creating a new Speech Service.
+Fill in the required fields:
+Subscription: Select your Azure subscription.
+Resource Group: Create a new one or use an existing resource group.
+Region: Choose the region closest to your users.
+Pricing Tier: Select a pricing tier (free or paid, depending on your needs).
+Click Review + Create and then Create to provision the service.
+Step 3: Get API Keys and Endpoint
+Navigate to your newly created Speech Service resource.
+Under Keys and Endpoint, copy the Key 1 or Key 2 and the Endpoint URL. These are required for API integration.
+Step 4: Configure Storage for Audio Files
+Search for Storage Account in the Azure Portal.
+Click + Create and set up a storage account:
+Choose the same resource group as your Speech Service.
+Set other configurations like storage performance, replication, etc.
+Upload your audio files to a container in the storage account.
+Step 5: Use the Speech-to-Text API
+Write a script or use Azure tools to connect to the Speech Service API.
+Use Azure SDKs (like azure-cognitiveservices-speech for Python) or REST APIs.
+Provide the endpoint URL, API key, and audio file details.
+Integrate the API call into your application or workflow to process audio files for transcription.
+Step 6: Automate Workflow with Logic Apps
+Search for Logic Apps in the Azure Portal.
+Click + Create to set up a new Logic App:
+Select the resource group and region.
+Use the Logic App Designer to create workflows.
+Add triggers and actions:
+Trigger: For example, monitor when a new file is uploaded to your storage account.
+Action: Call the Speech-to-Text API to transcribe the audio file.
+Action: Save the transcription to a file or database.
+Step 7: Test and Monitor
+Upload an audio file to your storage account to trigger the workflow.
+Monitor the Logic App runs under the Runs History tab.
+Verify the transcription output in the specified storage or database.
+Step 8: Deploy and Scale
+Enable auto-scaling or adjust the Speech Service’s pricing tier for production workloads.
+Use Azure Monitor to track usage and performance metrics.
+Ensure proper error handling and logging in your workflow
